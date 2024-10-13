@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://dlljys3un3gl"
+path="res://.godot/imported/seller_dialog.clyde-c449a82ddc4ade1db7a82328068f1ece.res"
+
+[deps]
+
+source_file="res://dialogs/seller_dialog.clyde"
+dest_files=["res://.godot/imported/seller_dialog.clyde-c449a82ddc4ade1db7a82328068f1ece.res"]
+
+[params]
+

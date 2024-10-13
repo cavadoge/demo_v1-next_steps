@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6uwieeml86f"]
+
+[ext_resource type="Script" path="res://characters/Seller1/panel.gd" id="1_qq8ak"]
+
+[node name="Panel" type="Panel"]
+offset_left = -182.0
+offset_top = -224.0
+offset_right = 192.0
+offset_bottom = 223.0
+script = ExtResource("1_qq8ak")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 21.0
+offset_right = 364.0
+offset_bottom = 196.0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://di6kkcjonxljx"]
+
+[ext_resource type="Script" path="res://worlds/seller_area.gd" id="1_t7gwy"]
+[ext_resource type="PackedScene" uid="uid://b6uwieeml86f" path="res://characters/Seller1/SellerDialogPanel.tscn" id="2_phy8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhh7l"]
+size = Vector2(159.153, 127.83)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_t7gwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_vhh7l")
+
+[node name="Panel" parent="." instance=ExtResource("2_phy8n")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -87.0
+offset_right = 190.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

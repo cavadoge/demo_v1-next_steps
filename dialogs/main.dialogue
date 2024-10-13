@@ -1,0 +1,11 @@
+~ start
+Seller: [[Hi|Hello|Howdy]], do you want to buy something?.
+Seller: Here are some choices.
+- Apple x1   -   1$
+	Seller: Thank you!.
+- Sword x1   -   50$
+	Seller: Thank you!.
+- Start again => start
+- End the conversation => END
+Seller: See you later...
+=> END

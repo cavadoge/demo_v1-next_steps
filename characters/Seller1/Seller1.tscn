@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjv2l45qall7g"]
+
+[ext_resource type="Texture2D" uid="uid://ce0ovpx6hb2wx" path="res://characters/icon.svg" id="1_fk52l"]
+[ext_resource type="PackedScene" uid="uid://di6kkcjonxljx" path="res://characters/Seller1/SellerArea.tscn" id="2_smayb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o35md"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yr5nd"]
+radius = 21.0
+height = 42.0
+
+[node name="Seller1" type="CharacterBody2D"]
+position = Vector2(1, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o35md")
+metadata/_edit_lock_ = true
+
+[node name="Icon" type="Sprite2D" parent="AnimatedSprite2D"]
+scale = Vector2(0.358552, 0.319577)
+texture = ExtResource("1_fk52l")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" parent="AnimatedSprite2D" instance=ExtResource("2_smayb")]
+position = Vector2(3, 8)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yr5nd")
+metadata/_edit_lock_ = true

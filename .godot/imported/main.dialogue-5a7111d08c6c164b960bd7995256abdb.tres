@@ -1,0 +1,153 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_gsflv"]
+
+[resource]
+script = ExtResource("1_gsflv")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray("Seller")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Seller",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "See you later...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "See you later...",
+"type": &"dialogue"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"2": {
+"character": "Seller",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], do you want to buy something?.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], do you want to buy something?.",
+"type": &"dialogue"
+},
+"3": {
+"character": "Seller",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Here are some choices.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here are some choices.",
+"type": &"dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "10",
+"notes": "",
+"responses": PackedStringArray("4", "6", "8", "9"),
+"tags": PackedStringArray(),
+"text": "Apple x1   -   1$",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Apple x1   -   1$",
+"type": &"response"
+},
+"5": {
+"character": "Seller",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "10",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Thank you!.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you!.",
+"type": &"dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"next_id_after": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Sword x1   -   50$",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sword x1   -   50$",
+"type": &"response"
+},
+"7": {
+"character": "Seller",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "10",
+"notes": "",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Thank you!.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you!.",
+"type": &"dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "2",
+"next_id_after": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Start again",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Start again",
+"type": &"response"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "end",
+"next_id_after": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "End the conversation",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "End the conversation",
+"type": &"response"
+}
+}
+raw_text = "~ start
+Seller: [[Hi|Hello|Howdy]], do you want to buy something?.
+Seller: Here are some choices.
+- Apple x1   -   1$
+	Seller: Thank you!.
+- Sword x1   -   50$
+	Seller: Thank you!.
+- Start again => start
+- End the conversation => END
+Seller: See you later...
+=> END"
+metadata/dialogue_manager_version = "2.42.2"
