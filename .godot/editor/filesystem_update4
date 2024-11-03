@@ -1,1 +1,4 @@
+res://worlds/world.tscn
+res://characters/Player1.tscn
 res://characters/Marna/Marna.tscn
+res://State/EnemyFollow.gd
